@@ -23,4 +23,6 @@ selected_consumption$Time <- as_hms(selected_consumption$Time)
 
 # https://stackoverflow.com/questions/12034424/convert-hourminutesecond-hhmmss-string-to-proper-time-class
 
+# create DateTime variable (with strptime i couldn't save as POSIXct directly in the dataframe, so i used as.POSIXct)
+selected_consumption$DateTime <- as.POSIXct(paste(selected_consumption$Date, selected_consumption$Time))
 

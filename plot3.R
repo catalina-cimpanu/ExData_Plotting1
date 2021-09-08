@@ -1,9 +1,6 @@
 # run common trunk of the code
 source("start.R")
 
-# create DateTime variable (with strptimei couldn't save as POSIXct directly in the dataframe, so i used as.POSIXct)
-selected_consumption$DateTime <- as.POSIXct(paste(selected_consumption$Date, selected_consumption$Time))
-
 # open png Graphics File Device
 png("plot3.png",  width = 480, height = 480)
 
