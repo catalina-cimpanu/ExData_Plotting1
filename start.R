@@ -19,7 +19,7 @@ consumption <- fread(file = "household_power_consumption.txt", na.strings="?")
 selected_consumption <- subset(consumption, consumption$Date == "1/2/2007" | consumption$Date == "2/2/2007")
 
 selected_consumption$Date <- as.Date(selected_consumption$Date, format = "%d/%m/%Y")
-selected_consumption$Time <- as.hms(selected_consumption$Time)
+selected_consumption$Time <- as_hms(selected_consumption$Time)
 
 # https://stackoverflow.com/questions/12034424/convert-hourminutesecond-hhmmss-string-to-proper-time-class
 
